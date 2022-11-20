@@ -1,0 +1,9 @@
+Insert into `Vevő` (`SzemélySz`, `Irányítószám`, `Település`, `Házszám`, `Utca`, `Email`, `Név`) values (23468233, 3900, 'Szerencs', 24, 'József Attila', 'kukorica12@gmail.com', 'Kukor Ica'),(67346823, 3903, 'Bekecs', 76, 'Virág', 'kisspistaHUN@freemail.hu', 'Kiss Pista'),(56259348, 3517, 'Miskolc', 45, 'Duna', 'pestibözsi34@citromail.hu', 'Pesti Erzsébet');
+Insert into `Rendelés`(`Rendelés_id`, `Rendelés_ár`, `Dátum`, `Rendelés_Fizetés`, `SzemélySz`) values (1, 22400, '2022-11-10', 'készpénz', 23468233),(2, 43128, '2022-11-03', 'kártya', 67346823),(3, 19846, '2022-10-23', 'készpénz', 56259348);
+Insert into `Termék` (`Termék_id`, `Cipő`, `Ruha`,`Kiegészítő`,`Rendelés_id`) values (10, 'Hoka','Nike téli futónadrág','Petzl Fejlámpa', 1),(20, 'Saucony','Kalenji rövid futópóló', 'Kompressziós szár', 2), (30, 'Salomon','Felső aláöltözet', 'Salomon mellény', 3);
+Insert into `Raktár` (`Raktár_id`, `Ra_Darabszám`, `Raktár_Ár`,`Csomag_tipus`) values (5, 97, 23454, 'Törékeny'),(15, 98, 45565, 'Folyékony'),(25,99,12345,'Törött');
+Insert into `Alkalmazott` (`Alkalmazott_id`,`Csatlakozás`, `Alkalmazott_név`, `Alkalmazott_Fizetés`, `Beosztás`) values (101,'2010-03-12', 'Ady Sándor', 413675, 'raktárvezető'),(102,'2008-07-10', 'Grízes Kálmán', 206342, 'raktáros'),(103, '1988-09-30', 'Gyári Zsolt', 345678, 'Műszakvezető');
+
+Insert into `Vevő_Telefonszám` (`Telefonszám`, `SzemélySz`) values ('0630-456-7890', 23468233), ('0620-987-6543', 67346823),('06-70-567-2345', 56259348);
+Insert into `Raktár_Rendelés` (`Rendelés_id`, `Raktár_id`) values (1, 5),(2,15),(3,25);
+Insert into `Raktár_Alkalmazott` (`Alkalmazott_id`, `Raktár_id`, `Elérhető`) values (101,5, True), (102, 15, False), (103, 25, True);
